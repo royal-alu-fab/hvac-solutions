@@ -1,0 +1,113 @@
+.navbar{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    transition: transform 0.5s ease-in-out;
+}
+/* .nav-up {
+    transform: translateY(-100%);
+}
+.nav-down {
+    transform: translateY(0);
+} */
+.content {
+    padding-top: 100px;
+}
+.leftside{
+    flex: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    margin-right: 10px;
+}
+.leftside :hover{
+    cursor: pointer;
+}
+.rightside{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    margin-left: 10px;
+    gap: 40px;
+    
+}
+.menuitem {
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 25px;
+}
+.leftside img {
+    height: 80px;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 20px 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+.rightside a:hover{
+    background-color: #f0f0f0;
+    justify-content: center;
+    border-radius: 15px;
+    text-decoration: rgb(239, 95, 95) underline 3px ;
+}
+.rightside.active {
+    display: block;
+}
+.contact {
+    border: 2px solid black;
+    border-radius: 40px;
+}
+
+/* ---  */
+
+@media screen and (max-width: 768px) {
+    .leftside {
+        padding-left: 10px;
+    }
+    .rightside {
+        padding-right: 10px;
+        display: none;
+        gap: 0px;
+    }
+    .menuitem {
+        display: flex;
+    }
+    .rightside.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        margin-bottom: 20px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar a {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+}

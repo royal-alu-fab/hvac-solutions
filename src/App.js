@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React,{useEffect} from 'react'
+import { BrowserRouter as Router, Route, Routes, useNavigate, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 import './App.css';
+import Scrolltotop from './pages/Scrolltotop';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const RedirectHandler = () => {
+  const navigate = useNavigate();
+    
+  useEffect(() => {
+    // Check if there's a redirect query parameter
+    const params = new URLSearchParams(window.location.search);
+    const redirectPath = params.get('redirect');
+    if (redirectPath) {
+      navigate(redirectPath, { replace: true });
+    }
+  }, [navigate]);
 
-export default App;
+  return null;
+};
+  return (
+    <div className='App'>
+      <Router>
+      <Scrolltotop />
+        <Navbar />
+        <RedirectHandler />
+        <div className='maincontent'>
+        <Routes>
+          <Route path='/' element = {<Home />}></Route>
+          <Route path='/contact' element = {<Contact />}></Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
+
+        </Routes>
+        </div>
+        <Footer />
+      </Router>
+      
+    </div>
+  )
+}
+export default App

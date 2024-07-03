@@ -1,0 +1,245 @@
+.contactus{
+    justify-content: center;
+}
+.contactphoto{
+    margin: 20px;
+    height: 500px;
+}
+.contactphoto img{
+    width: 90%;
+    height: 100%;
+}
+.contact-header{
+    padding-left: 100px;    
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+.contact-division{
+    display: flex;
+    margin: 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    height: 400px;
+}
+.contact-detail{
+    /* border: 1px solid black; */
+    width: 50%;
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    height: 80%;
+}
+.contact-item {
+    display:flex;
+    /* border: 1px solid black; */
+    padding-left: 60px;
+    align-items: center;
+    height: 80%;
+}
+.contact-item span :hover{
+    cursor: pointer;
+}
+.contact-item div :hover{
+    cursor: pointer;
+}
+.contact-item span{
+    justify-content: center;
+    width: 50px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    font-size: 60px;
+}
+.contact-item p{
+    margin-left: 60px;
+    font-size: 20px;
+    text-align: left;
+}
+.contact-form{
+    /* border: 1px solid black; */
+    width: 50%;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-group input,  .form-group select,  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea.form-control {
+    resize: none; /* Allow vertical resizing */
+    overflow-y: auto;
+    height: 100px; /* Initial height for the textarea */
+  }
+  
+  .submit-btn {
+    /* align-self: flex-end; /* Align the submit button to the right */
+    padding: 10px 20px; 
+    background-color: #333;
+    color: #fff;
+    border: 1none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    width: 100px;
+  }
+  .form-group-submit {
+    display: flex;
+    margin-right: 10px ;
+    justify-content: flex-end; /* Align the submit button to the right */
+  }
+  .submit-btn:hover {
+    background-color: #555;
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .location-heading {
+    /* padding: 10px;     */
+    margin-top: 30px;
+  }
+  .locations-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+    padding: 20px; /* Optional: padding around the container */
+  }
+  
+  .location {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .map :hover{
+    cursor: pointer;
+  }
+  .address :hover{
+    cursor: pointer;
+  }
+  .map img {
+    width: 80%; /* Ensure the map image takes up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .address {
+    margin-top: 10px; /* Space between the map and the address */
+    font-size: 18px;
+    color: #333; /* Example text color */
+  }
+
+
+  @media(max-width:768px) {
+  .contactus{
+      justify-content: center;
+      margin: 10px;
+  }
+  .contactphoto{
+      margin: 0px;
+      height: 250px;
+  }
+  .contactphoto img{
+      width: 100%;
+  }
+  .contact-header{
+      padding-left: 10px;    
+      margin-top: 10px;
+  }
+  .contact-division{
+      display: grid;
+      margin: 10px;
+      height: 100%;
+      max-width: 100%;
+      padding-bottom: 30px;
+      word-break: break-word;
+  }
+  .contact-detail{
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+  }
+  .contact-item {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      flex-wrap: wrap;
+  }
+  .contact-item span{
+      /* font-size: 30px; */
+      height: 30px;
+      width: 26px;
+      margin-right: 10px;
+  }
+  .contact-item p{
+      margin-left: 5px;
+      font-size: 18px;
+  }
+  .contact-form{
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      margin-top: 10px;
+  }
+  .forms {
+    margin: 10px;
+    }
+    .error {
+      font-size: 14px;
+      margin-top: 0px;
+    }
+    .location-heading{
+      padding-left: 0px;
+    }
+    .locations-container {
+      display: grid;
+      margin: 0px;
+      padding: 0px; /* Optional: padding around the container */
+    }
+    .location {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .location :hover{
+      cursor: pointer;
+    }
+    .map img {
+      width: 80%; /* Ensure the map image takes up the full width of the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .address {
+      margin-top: 10px; /* Space between the map and the address */
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333; /* Example text color */
+    }
+  }
