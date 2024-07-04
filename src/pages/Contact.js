@@ -82,7 +82,7 @@ function Contact() {
         <div className='contact-detail'>
           <div className='contact-item'>
             <span className='contact-icons'><IoIosMail /></span>
-            <p> royalaluthermalbreaksales@gmail.com</p>
+            <p> royalalufab01@gmail.com</p>
           </div>
           <div className='contact-item'>
             <span className='contact-icons'><FaPhone /></span>
